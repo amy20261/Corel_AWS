@@ -216,3 +216,11 @@ Check price_PE7 product page_35% OFF_DEV
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PE7 product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
+
+Check price_PE7 product page_35% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PE735.csv
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PE7 product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
