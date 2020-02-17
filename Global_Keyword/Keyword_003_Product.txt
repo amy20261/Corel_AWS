@@ -84,9 +84,9 @@ Check promo price on product_radio_CDGS
     [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
     ...    ${UPBOXSKU}
     Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_radio button
-    Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
-    Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_radio button
-    ...    AND    Select BOX_dropdown list
+    #Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
+    #Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_radio button
+    ...    # AND    Select BOX_dropdown list
     Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
