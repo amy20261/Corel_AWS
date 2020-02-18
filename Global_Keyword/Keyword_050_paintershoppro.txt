@@ -4,20 +4,20 @@ Resource          Keyword_001_Home.txt
 Resource          Keyword_003_Product.txt
 
 *** Keywords ***
-Check PSU product page
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Products Page    ${env}    ${wPSP}    en    ${currency}    ${PSU}
-    Run keyword if    '${SKU}' in "ESDPSP2020ML;ESDPSP2020MLUG"    run keyword and continue on failure    Check promo price on product_dropdown list_PSU    ${SKU}    ${Full_Reg}    ${SavingBadge}
-    ...    ${Full_promo}    ${UPSU}    ${OPSU}    ${XPSU}
-    close all browsers
-
 Check PSP product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Products Page    ${env}    ${wPSP}    en    ${currency}    ${PSP}
-    Run keyword if    '${SKU}' in "ESDPSP2020ULML;ESDPSP2020ULMLUG"    run keyword and continue on failure    Check promo price on product_dropdown list_PSP    ${SKU}    ${Full_Reg}    ${SavingBadge}
+    Run keyword if    '${SKU}' in "ESDPSP2020ML;ESDPSP2020MLUG"    run keyword and continue on failure    Check promo price on product_dropdown list_PSP    ${SKU}    ${Full_Reg}    ${SavingBadge}
     ...    ${Full_promo}    ${UPSP}    ${OPSP}    ${XPSP}
+    close all browsers
+
+Check PSU product page
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Products Page    ${env}    ${wPSP}    en    ${currency}    ${PSU}
+    Run keyword if    '${SKU}' in "ESDPSP2020ULML;ESDPSP2020ULMLUG"    run keyword and continue on failure    Check promo price on product_dropdown list_PSU    ${SKU}    ${Full_Reg}    ${SavingBadge}
+    ...    ${Full_promo}    ${UPSU}    ${OPSU}    ${XPSU}
     close all browsers
 
 Check PSB product page
