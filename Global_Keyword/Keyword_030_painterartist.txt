@@ -8,15 +8,16 @@ Check PTR product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wPTR}    en    ${currency}    ${PTR}
-    Check promo price on product_dropdown list_PTR    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPTR}    ${OPTR}
-    ...    ${XPTR}
+    Run keyword if    '${SKU}' in "ESDPTR2019ML;ESDPTR2019MLUG"    run keyword and continue on failure    Check promo price on product_dropdown list_PTR    ${SKU}    ${Full_Reg}    ${SavingBadge}
+    ...    ${Full_promo}    ${UPTR}    ${OPTR}    ${XPTR}
     close all browsers
 
 Check PE6 product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wPTR}    en    ${currency}    ${PE}
-    Check promo price on product_dropdown list_PE6    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPE}
+    Run keyword if    '${SKU}' == '${CPE}'    run keyword and continue on failure    Check promo price on product_dropdown list_PE6    ${SKU}    ${Full_Reg}    ${SavingBadge}
+    ...    ${Full_promo}    ${UPE}
     close all browsers
 
 Check particleshop product page
@@ -52,5 +53,6 @@ Check PE7 product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wPTR}    en    ${currency}    ${PE}
-    Check promo price on product_dropdown list_PE6    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPE}
+    Run keyword if    '${SKU}' == '${CPE}'    run keyword and continue on failure    Check promo price on product_dropdown list_PE6    ${SKU}    ${Full_Reg}    ${SavingBadge}
+    ...    ${Full_promo}    ${UPE}
     close all browsers

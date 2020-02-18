@@ -83,10 +83,8 @@ Verify Upgrade_Sale price
 Check promo price on product_radio_CDGS
     [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
     ...    ${UPBOXSKU}
-    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_radio button
-    #Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
-    #Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_radio button
-    ...    # AND    Select BOX_dropdown list
+    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_radio button    #Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list    #Run keyword if
+    ...    # '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_radio button    # AND    Select BOX_dropdown list
     Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
@@ -136,9 +134,9 @@ Check promo price on product_dropdown list_CAD
     [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
     ...    ${UPBOXSKU}
     Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_dropdown list_CAD
-    Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
-    Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown list_CAD
-    ...    AND    Select BOX_dropdown list
+    #Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
+    #Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown list_CAD
+    ...    # AND    Select BOX_dropdown list
     Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
@@ -148,9 +146,9 @@ Check promo price on product_dropdown list_PTR
     [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
     ...    ${UPBOXSKU}
     Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_dropdown llist_PTR
-    Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list_PTR
-    Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown llist_PTR
-    ...    AND    Select BOX_dropdown list_PTR
+    #Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list_PTR
+    #Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown llist_PTR
+    ...    # AND    Select BOX_dropdown list_PTR
     Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
