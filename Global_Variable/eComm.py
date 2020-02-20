@@ -139,7 +139,6 @@ CDGS_Sub='C:\\Corel\\Global_Variable\\Data\\CDGS_subscription.csv'
 CDTS_Sub='C:\\Corel\\Global_Variable\\Data\\CDTS_subscription.csv'
 
 #VA price file
-VA_particleshop='C:\\Corel\\Global_Variable\\VA\\VA_Particleshop.csv'
 VA_EBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_EBrushPack.csv'
 VA_MBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_MBrushPack.csv'
 VA_NBFX='C:\\Corel\\Global_Variable\\VA\\VA_NBFX.csv'
@@ -156,6 +155,12 @@ VA_MultiCam='C:\\Corel\\Global_Variable\\VA\\VA_MultiCam.csv'
 VA_PE6='C:\\Corel\\Global_Variable\\VA\\VA_PE6.csv'
 VA_AEBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_AnimationEssentialsBrushPack.csv'
 VA_AnimationsBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_AnimationBrushPack.csv'
+VA_particleshop='C:\\Corel\\Global_Variable\\VA\\VA_Particleshop.csv'
+VA_particleshop_5='C:\\Corel\\Global_Variable\\VA\\VA_Particleshop_5.csv'
+VA_City Strike Painter Brush Pack Bundle='C:\\Corel\\Global_Variable\\VA\\VA_City Strike Painter Brush Pack Bundle.csv'
+VA_Artistic Explosion ParticleShop Brush Pack Bundle='C:\\Corel\\Global_Variable\\VA\\VA_Artistic Explosion ParticleShop Brush Pack Bundle.csv'
+VA_Best Sellers Script Bundle='C:\\Corel\\Global_Variable\\VA\\VA_Best Sellers Script Bundle.csv'
+
 
 #HTTPS files
 HTTPS_ASP='C:\\Corel\\Global_Variable\\HTTPS\\HTTPS_ASP.csv'
