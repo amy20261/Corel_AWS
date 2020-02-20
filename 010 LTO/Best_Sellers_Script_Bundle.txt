@@ -9,7 +9,7 @@ Resource          ../Global_Keyword/Keyword_003010_LTO.txt
 
 *** Test Cases ***
 PSP Holiday script_PSP_DEV
-    ${contents}=    Get File    ${VA_Best Sellers Script Bundle}
+    ${contents}=    Get File    ${VA_BestSellersScriptBundle}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -18,7 +18,7 @@ PSP Holiday script_PSP_DEV
     \    close all browsers
 
 PSP Holiday script_PSU_DEV
-    ${contents}=    Get File    ${VA_Best Sellers Script Bundle}
+    ${contents}=    Get File    ${VA_BestSellersScriptBundle}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -27,7 +27,7 @@ PSP Holiday script_PSU_DEV
     \    close all browsers
 
 PSP Holiday script_PSP_STG
-    ${contents}=    Get File    ${VA_Best Sellers Script Bundle}
+    ${contents}=    Get File    ${VA_BestSellersScriptBundle}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -36,7 +36,7 @@ PSP Holiday script_PSP_STG
     \    close all browsers
 
 PSP Holiday script_PSU_STG
-    ${contents}=    Get File    ${VA_Best Sellers Script Bundle}
+    ${contents}=    Get File    ${VA_BestSellersScriptBundle}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;

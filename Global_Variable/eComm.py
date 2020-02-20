@@ -157,9 +157,9 @@ VA_AEBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_AnimationEssentialsBrushPack.
 VA_AnimationsBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_AnimationBrushPack.csv'
 VA_particleshop='C:\\Corel\\Global_Variable\\VA\\VA_Particleshop.csv'
 VA_particleshop_5='C:\\Corel\\Global_Variable\\VA\\VA_Particleshop_5.csv'
-VA_City Strike Painter Brush Pack Bundle='C:\\Corel\\Global_Variable\\VA\\VA_City Strike Painter Brush Pack Bundle.csv'
-VA_Artistic Explosion ParticleShop Brush Pack Bundle='C:\\Corel\\Global_Variable\\VA\\VA_Artistic Explosion ParticleShop Brush Pack Bundle.csv'
-VA_Best Sellers Script Bundle='C:\\Corel\\Global_Variable\\VA\\VA_Best Sellers Script Bundle.csv'
+VA_CityStrikePainterBrushPackBundle='C:\\Corel\\Global_Variable\\VA\\VA_CityStrikePainterBrushPackBundle.csv'
+VA_ArtisticExplosionParticleShopBrushPackBundle='C:\\Corel\\Global_Variable\\VA\\VA_ArtisticExplosionParticleShopBrushPackBundle.csv'
+VA_BestSellersScriptBundle='C:\\Corel\\Global_Variable\\VA\\VA_BestSellersScriptBundle.csv'
 
 
 #HTTPS files

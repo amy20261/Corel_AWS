@@ -9,7 +9,7 @@ Resource          ../Global_Keyword/Keyword_003010_LTO.txt
 
 *** Test Cases ***
 City Strike Painter Brush Pack Bundle_painter_dev
-    ${contents}=    Get File    ${VA_City Strike Painter Brush Pack Bundle}
+    ${contents}=    Get File    ${VA_CityStrikePainterBrushPackBundle}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -18,7 +18,7 @@ City Strike Painter Brush Pack Bundle_painter_dev
     \    close all browsers
 
 City Strike Painter Brush Pack Bundle_painter_Stg
-    ${contents}=    Get File    ${VA_City Strike Painter Brush Pack Bundle}
+    ${contents}=    Get File    ${VA_CityStrikePainterBrushPackBundle}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;

@@ -9,7 +9,7 @@ Resource          ../Global_Keyword/Keyword_003010_LTO.txt
 
 *** Test Cases ***
 Artistic Explosion ParticleShop Brush Pack Bundle_particleshop_dev
-    ${contents}=    Get File    ${VA_Artistic Explosion ParticleShop Brush Pack Bundle}
+    ${contents}=    Get File    ${VA_ArtisticExplosionParticleShopBrushPack Bundle}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -18,7 +18,7 @@ Artistic Explosion ParticleShop Brush Pack Bundle_particleshop_dev
     \    close all browsers
 
 Artistic Explosion ParticleShop Brush Pack Bundle_particleshop_stg
-    ${contents}=    Get File    ${VA_Artistic Explosion ParticleShop Brush Pack Bundle}
+    ${contents}=    Get File    ${VA_Artistic ExplosionParticleShopBrushPackBundle}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
