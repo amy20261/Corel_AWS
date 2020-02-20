@@ -19,16 +19,6 @@ Check Link_Home Page_DEV_PTR_PE_Particleshop_brush_2019
     \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     [Teardown]
 
-Check Link_Special Offer Hero_DEV
-    ${contents}=    Get File    ${PTR_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wPTR}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
 Check Link_Special Offer Page_DEV
     ${contents}=    Get File    ${PTR_SP}
     @{lines}=    Split to lines    ${contents}
@@ -50,25 +40,6 @@ Check Link_Home Page_STG_PTR_PE_Particleshop_brush_2019
     \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     [Teardown]
 
-Check Trial down_Home Page_STG
-    ${contents}=    Get File    ${PTR_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    STG    ${wPTR}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-
-Check Link_Special Offer Hero_STG
-    ${contents}=    Get File    ${PTR_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wPTR}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
 Check Link_Special Offer Page_STG
     ${contents}=    Get File    ${PTR_SP}
     @{lines}=    Split to lines    ${contents}
@@ -87,6 +58,15 @@ Check Trial down_Home Page_DEV
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wPTR}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+
+Check Trial down_Home Page_STG
+    ${contents}=    Get File    ${PTR_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    STG    ${wPTR}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
 Check LTO _Home Page

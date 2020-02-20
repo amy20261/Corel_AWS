@@ -20,27 +20,6 @@ Check Link_Home Page_DEV_PSU_PSP_PSU_PVB_Photomirage_particleshop_2019
     \    ...    @{var}[8]
     [Teardown]
 
-Check Link_Special Offer Hero_DEV
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    DEV    ${wPSP}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
-Check Link_Special Offer Page_DEV_PSU_PSU_PSP_PM_PVB
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-    \    ...    @{var}[7]
-    \    close all browsers
-
 Check Link_Special Offer Page_DEV_PSU_PSP_PSU_PVB_PM
     ${contents}=    Get File    ${PSP_SP}
     @{lines}=    Split to lines    ${contents}
@@ -73,27 +52,6 @@ Check Link_Home Page_stg_PSU_PSP_PSU_PVB_Photomirage_particleshop_2019
     \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
     \    ...    @{var}[8]
     [Teardown]
-
-Check Link_Special Offer Hero_stg
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
-Check Link_Special Offer Page_STG_PSU_PSU_PSP_PM_PVB
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-    \    ...    @{var}[7]
-    \    close all browsers
 
 Check Link_Special Offer Page_STG_PSU_PSP_PSU_PVB_PM
     ${contents}=    Get File    ${PSP_SP}
@@ -154,16 +112,6 @@ Check LTO_Special Offer Page
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify LTO on special offer Page
-    \    close all browsers
-
-Check SavingBadge_Special Offer Page_PSU_PSP_PM_PVB
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify SavingBadge on special offer Page_PSU_PSP_PM_PVB
     \    close all browsers
 
 Check SavingBadge_Special Offer Page_PSP_PSU_PVB_PM

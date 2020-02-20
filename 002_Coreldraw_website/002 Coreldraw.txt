@@ -19,16 +19,6 @@ Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     \    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     [Teardown]
 
-Check Link_Special Offer Hero_DEV
-    ${contents}=    Get File    ${CDGS_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
 Check Link_Special Offer Page_DEV
     ${contents}=    Get File    ${CDGS_SP}
     @{lines}=    Split to lines    ${contents}
@@ -63,17 +53,6 @@ Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
     \    close all browsers
     \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-    [Teardown]
-
-Check Link_Special Offer Hero_STG
-    ${contents}=    Get File    ${CDGS_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
     [Teardown]
 
 Check Link_Special Offer Page_STG
@@ -151,28 +130,6 @@ Check SavingBadge_Special Offer Page
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify SavingBadge on special offer page
     \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify SavingBadge on special offer page_JP
     \    close all browsers
-
-Check Hero _Home Page_BN1
-    ${contents}=    Get File    ${Main_message_LOC}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    ${env}    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
-    \    close all browsers
-    [Teardown]
-
-Check Hero_ speical Offer Page_BN1
-    ${contents}=    Get File    ${Main_message_LOC}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    ${env}    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
-    \    close all browsers
-    [Teardown]
 
 Check HSW _Home Page_BN1
     ${contents}=    Get File    ${HSW_BN1}

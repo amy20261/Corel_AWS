@@ -1,0 +1,27 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Library           Screenshot    c:/temp
+Variables         ../Global_Variable/eComm.py
+Resource          ../Global_Keyword/Keyword_003_Product.txt
+Resource          ../Global_Keyword/Keyword_003010_LTO.txt
+
+*** Test Cases ***
+Artistic Explosion ParticleShop Brush Pack Bundle_particleshop_dev
+    ${contents}=    Get File    ${VA_Artistic Explosion ParticleShop Brush Pack Bundle}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on particleshop page    dev    Artistic Explosion ParticleShop Brush Pack Bundle    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Artistic Explosion ParticleShop Brush Pack Bundle_particleshop_stg
+    ${contents}=    Get File    ${VA_Artistic Explosion ParticleShop Brush Pack Bundle}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on particleshop page    stg    Artistic Explosion ParticleShop Brush Pack Bundle    en    @{var}[1]    @{var}[2]
+    \    close all browsers
