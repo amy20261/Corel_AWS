@@ -14,7 +14,7 @@ City Strike Painter Brush Pack Bundle_painter_dev
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PTR page    dev    City Strike Painter Brush Pack Bundle    en    @{var}[1]    @{var}[2]
+    \    Check VA on PTR page    dev    City Strike Painter    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 City Strike Painter Brush Pack Bundle_painter_Stg
@@ -23,5 +23,5 @@ City Strike Painter Brush Pack Bundle_painter_Stg
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PTR page    stg    City Strike Painter Brush Pack Bundle    en    @{var}[1]    @{var}[2]
+    \    Check VA on PTR page    stg    City Strike Painter    en    @{var}[1]    @{var}[2]
     \    close all browsers
