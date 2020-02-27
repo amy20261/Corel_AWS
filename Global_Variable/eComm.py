@@ -160,6 +160,7 @@ VA_particleshop_5='C:\\Corel\\Global_Variable\\VA\\VA_Particleshop_5.csv'
 VA_CityStrikePainterBrushPackBundle='C:\\Corel\\Global_Variable\\VA\\VA_CityStrikePainterBrushPackBundle.csv'
 VA_ArtisticExplosionParticleShopBrushPackBundle='C:\\Corel\\Global_Variable\\VA\\VA_ArtisticExplosionParticleShopBrushPackBundle.csv'
 VA_BestSellersScriptBundle='C:\\Corel\\Global_Variable\\VA\\VA_BestSellersScriptBundle.csv'
+VA_BestSellersScriptBundl='C:\\Corel\\Global_Variable\\VA\\VA_P_BestSellersScriptBundle.csv'
 
 
 #HTTPS files

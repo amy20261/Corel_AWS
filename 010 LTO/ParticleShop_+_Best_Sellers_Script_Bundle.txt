@@ -26,13 +26,22 @@ ParticleShop + Best Sellers Script Bundle_PSU_DEV
     \    Check VA on PSU page    dev    Best Sellers Script Bundl    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-ParticleShop + Best Sellers Script Bundle_DEV
+ParticleShop + Best Sellers Script Bundle_PVB_DEV
     ${contents}=    Get File    ${VA_BestSellersScriptBundl}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PVB page    dev    PSP Holiday Scripts    en    @{var}[1]    @{var}[2]
+    \    Check VA on PVB page    dev    Best Sellers Script Bundl    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+ParticleShop + Best Sellers Script Bundle_PVB Ult_DEV
+    ${contents}=    Get File    ${VA_BestSellersScriptBundl}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PVBU page    dev    Best Sellers Script Bundl    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 ParticleShop + Best Sellers Script Bundle_PSP_STG
@@ -60,4 +69,13 @@ ParticleShop + Best Sellers Script Bundle_PVB_STG
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Check VA on PVB page    STG    Best Sellers Script Bundl    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+ParticleShop + Best Sellers Script Bundle_PVB Ult_STG
+    ${contents}=    Get File    ${VA_BestSellersScriptBundl}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PVBU page    STG    Best Sellers Script Bundl    en    @{var}[1]    @{var}[2]
     \    close all browsers
