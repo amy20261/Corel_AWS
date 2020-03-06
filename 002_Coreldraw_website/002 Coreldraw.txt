@@ -81,15 +81,6 @@ Check Link_Special Offer Page_STG_CDGS_CDGS_CDGS SUB_CAD_CDHS
     \    ...    # coreldraw    @{var}[6]    @{var}[7]
     \    close all browsers
 
-Check Trial down_Home Page
-    ${contents}=    Get File    ${CDGS_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify trial download on home page_CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-
 Check LTO _Home Page
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
@@ -154,6 +145,63 @@ Check HSW _Free Trial Page_BN1
     \    ...    @{var}[4]
     \    close all browsers
     [Teardown]
+
+Check Trial down_Home Page
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+
+Check Trial down_free-trials Page
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Free Trial Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+
+Check Trial down_product Page
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Product Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]    ${CDGS}
+    \    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+
+Check Trial down_product/License Page
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Product Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]    license
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
+
+Check Trial down_product/education Page
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Product Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]    education
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
+
+Check Trial down_product/education-edition Page
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Product Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]    education-edition
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
 
 *** Keywords ***
 verify link on home page_CDGS2019_default
@@ -238,7 +286,7 @@ verify link in special offer Page_ 2019_no HS
     #run keyword and continue on failure    verify URL contain    ${Prod 4}
     close all browsers
 
-verify trial download on home page_CDGS
+verify trial download CDGS
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Run Keyword And Continue On Failure    Click Trial download_CDGs
     Run Keyword And Continue On Failure    Verify URL Contain    trial-thank-you

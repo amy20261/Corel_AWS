@@ -80,15 +80,13 @@ Verify Upgrade_Sale price
     [Arguments]    ${Upgrade_Promo}
     Run Keyword And Continue On Failure    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${Upgrade_Promo}
 
-Check promo price on product_radio_CDGS
-    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
-    ...    ${UPBOXSKU}
-    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_radio button    #Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list    #Run keyword if
-    ...    # '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_radio button    # AND    Select BOX_dropdown list
+Check promo price on product_CDGS_one time purchase
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
+    click one time purchase
     Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
-    ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
+    ...    ELSE    Verify Full_Promo Price-one time purchase    ${Full_Reg}
 
 Check promo price on product_radio_CDHS
     [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}
@@ -133,10 +131,8 @@ Check promo price on product_dropdown list
 Check promo price on product_dropdown list_CAD
     [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
     ...    ${UPBOXSKU}
-    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_dropdown list_CAD
-    #Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
-    #Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown list_CAD
-    ...    # AND    Select BOX_dropdown list
+    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_dropdown list_CAD    #Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list    #Run keyword if
+    ...    # '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown list_CAD    # AND    Select BOX_dropdown list
     Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
@@ -145,10 +141,8 @@ Check promo price on product_dropdown list_CAD
 Check promo price on product_dropdown list_PTR
     [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
     ...    ${UPBOXSKU}
-    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_dropdown llist_PTR
-    #Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list_PTR
-    #Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown llist_PTR
-    ...    # AND    Select BOX_dropdown list_PTR
+    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_dropdown llist_PTR    #Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list_PTR    #Run keyword if
+    ...    # '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown llist_PTR    # AND    Select BOX_dropdown list_PTR
     Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
@@ -264,3 +258,39 @@ Check promo price on product_dropdown list_PSU
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
+
+Click one time purchase
+    click element    //a[@aria-controls='lifetime']
+
+Verify Full_Promo Price-one time purchase
+    [Arguments]    ${FULL_Promo}
+    Run Keyword And Continue On Failure    Element should contain    //div[@class='tab-pane active']//div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Promo}
+
+Check promo price on product_CDGS_annual subscription
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
+    ...    AND    Verify Full_Reg price    ${Full_Reg}
+    ...    AND    Verify Full_Promo Price    ${Full_promo}
+    ...    ELSE    Verify Full_Promo Price-annual subscription    ${Full_Reg}
+
+Verify Full_Promo Price-annual subscription
+    [Arguments]    ${FULL_Promo}
+    Run Keyword And Continue On Failure    Element should contain    //div[@class='tab-pane active']//div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Promo}
+
+Open Browser to pages
+    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=painter
+    Wait Until Keyword Succeeds    2 min    0.3 sec    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/pages/${page}/?currency=${currency}    browser=firefox
+    Wait Until Keyword Succeeds    2 min    0.3 sec    Go to    https://${env}.www.${microsite}.public.corel.net/${lan}/pages/${page}/?currency=${currency}
+    Maximize Browser Window
+    sleep    4
+
+Check promo price on product_CDGS_upgrade
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
+    ...    AND    Verify Full_Reg price    ${Full_Reg}
+    ...    AND    Verify Full_Promo Price    ${Full_promo}
+    ...    ELSE    Verify Full_Promo Price-upgrade    ${Full_Reg}
+
+Verify Full_Promo Price-upgrade
+    [Arguments]    ${FULL_Promo}
+    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Promo}
