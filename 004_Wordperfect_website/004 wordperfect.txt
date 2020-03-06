@@ -19,6 +19,16 @@ Check Link_Home Page_DEV_Std_Pro_HS_PDF_2019
     \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     [Teardown]
 
+Check Link_Special Offer Hero_DEV
+    ${contents}=    Get File    ${WPO_sp}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    DEV    ${wWPO}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
+
 Check Link_Special Offer Page_DEV
     ${contents}=    Get File    ${WPO_SP}
     @{lines}=    Split to lines    ${contents}
@@ -39,6 +49,16 @@ Check Link_Home Page_STG_Std_Pro_HS_PDF_2019
     \    Open Browser to Home Page    stg    ${wWPO}    @{var}[1]    @{var}[2]
     \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     [Teardown]
+
+Check Link_Special Offer Hero_STG
+    ${contents}=    Get File    ${WPO_sp}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${wWPO}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
 
 Check Link_Special Offer Page_STG
     ${contents}=    Get File    ${WPO_SP}
