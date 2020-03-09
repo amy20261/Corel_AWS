@@ -152,7 +152,7 @@ Check Trial down_Home Page
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
 Check Trial down_free-trials Page
@@ -161,7 +161,7 @@ Check Trial down_free-trials Page
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Open Browser to Free Trial Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Open Browser to Free Trial Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
 Check Trial down_product Page
@@ -170,7 +170,7 @@ Check Trial down_product Page
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Open Browser to Product Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]    ${CDGS}
+    \    Open Browser to Product Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]    ${CDGS}
     \    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
 Check Trial down_product/License Page
@@ -179,7 +179,7 @@ Check Trial down_product/License Page
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Open Browser to Product Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]    license
+    \    Open Browser to Product Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]    license
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]
 
@@ -189,11 +189,68 @@ Check Trial down_product/education Page
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Open Browser to Product Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]    education
+    \    Open Browser to Product Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]    education
     \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]
 
 Check Trial down_product/education-edition Page
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Product Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]    education-edition
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
+
+Check Trial down_Home Page_stg
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+
+Check Trial down_free-trials Page-stg
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Free Trial Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+
+Check Trial down_product Page-stg
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Product Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]    ${CDGS}
+    \    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+
+Check Trial down_product/License Page-stg
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Product Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]    license
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
+
+Check Trial down_product/education Page-stg
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Product Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]    education
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify trial download CDGS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
+
+Check Trial down_product/education-edition Page-stg
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
