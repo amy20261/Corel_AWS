@@ -51,7 +51,7 @@ Screenshot_coreldraw
     screenshot_coreldraw    it    it-IT
     screenshot_coreldraw    nl    nl-NL
     screenshot_coreldraw    br    pt-BR
-    screenshot_coreldraw_No H&S    jp    ja-JP
+    screenshot_coreldraw    jp    ja-JP
     screenshot_coreldraw    tw    zh-TW
     screenshot_coreldraw    cn    zh-HK
     screenshot_coreldraw    en    en-IE
@@ -256,6 +256,11 @@ screenshot_coreldraw
     Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    free-trials
     Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    all-products
     Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/coreldraw
+    Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/coreldraw
+    Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/coreldraw/mac
+    Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/license
+    Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/education
+    Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/education-edition
     Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/corel-cad
     Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/technical-suite
     Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/home-student
