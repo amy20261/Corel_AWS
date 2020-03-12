@@ -1,0 +1,89 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          ../Global_Keyword/Keyword_020_coreldraw.txt
+Variables         ../Global_Variable/eComm.py
+
+*** Test Cases ***
+Verify price on Cart page with SKU_CDGSSUBPUREPREM2
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\CDGS_365.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    Run keyword if    '@{var}[0]' in 'en-CA'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    CAD
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'en-US'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    USD
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'en-GB'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    GBP
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'en-AU;'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    AUD
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'fr-FR;de-DE;it-IT;nl-NL;en-IE'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    EUR
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'pt-BR;'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    BRL
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'ja-JP;'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    JPY
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'zh-TW;'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    TWD
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'zh-HK'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    HKD
+    \    ...    @{var}[4]
+
+Verify price on Cart page with SKU_ESDCDGS2020AM
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\CDGS_SPR.csv
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    Run keyword if    '@{var}[0]' in 'en-CA'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    CAD
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'en-US'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    USD
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'en-GB'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    GBP
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'en-AU;'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    AUD
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'fr-FR;de-DE;it-IT;nl-NL;en-IE'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    EUR
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'pt-BR;'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    BRL
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'ja-JP;'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    JPY
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'zh-TW;'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    TWD
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'zh-HK'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    HKD
+    \    ...    @{var}[4]
+
+Verify price on Cart page with SKU_license
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\CDGS_license.csv
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    Run keyword if    '@{var}[0]' in 'en-CA'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    CAD
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'en-US'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    USD
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'en-GB'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    GBP
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'en-AU;'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    AUD
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'fr-FR;de-DE;it-IT;nl-NL;en-IE'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    EUR
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'pt-BR;'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    BRL
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'ja-JP;'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    JPY
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'zh-TW;'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    TWD
+    \    ...    @{var}[4]
+    \    Run keyword if    '@{var}[0]' in 'zh-HK'    run keyword and continue on failure    Verify price on cart page    @{var}[1]    HKD
+    \    ...    @{var}[4]
+
+*** Keywords ***
+Verify price on cart page
+    [Arguments]    ${SKU}    ${currency}    ${price}
+    run keyword and continue on failure    Open browser    https://store.coreldraw.com/1103/purl-${SKU}?currency=${currency}
+    run keyword and continue on failure    element should contain    //span[@class='CBProductTotalPrice']//span[@class='cbItotal']    ${price}
+    close all browsers
