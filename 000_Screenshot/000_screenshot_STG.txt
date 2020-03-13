@@ -309,6 +309,7 @@ screenshot_PSP
     Open browser to page    stg.www.paintshoppro.public.corel.net    ${lan}    ${currency}    products/paintshop-pro
     Open browser to page    stg.www.paintshoppro.public.corel.net    ${lan}    ${currency}    products/paintshop-pro/ultimate
     Open browser to page    stg.www.paintshoppro.public.corel.net    ${lan}    ${currency}    products/paintshop-pro/standard
+    Open browser to page    stg.www.paintshoppro.public.corel.net    ${lan}    ${currency}    products/photo-video-bundle/pro
     Open browser to page    stg.www.paintshoppro.public.corel.net    ${lan}    ${currency}    products/photo-video-bundle
     Open browser to page    stg.www.paintshoppro.public.corel.net    ${lan}    ${currency}    products
     close all browsers
