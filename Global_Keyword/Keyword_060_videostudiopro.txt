@@ -16,7 +16,7 @@ Check VSP product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Products Page    ${env}    ${wVSP}    en    ${currency}    ${VSP}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UVSP}    ${OVSP}
+    Check promo price on product_dropdown list_VSP    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UVSP}    ${OVSP}
     ...    ${XVSP}
     close all browsers
 
