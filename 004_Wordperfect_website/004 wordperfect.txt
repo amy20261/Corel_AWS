@@ -162,7 +162,7 @@ Check HSW _Free Trial Page_BN1
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Free Trial Page    ${env}    ${wWPO}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en'    verify HSW    @{var}[3]    @{var}[5]
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en'         @{var}[3]    @{var}[5]
     \    ...    @{var}[4]
     \    close all browsers
     [Teardown]
