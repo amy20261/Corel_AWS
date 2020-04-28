@@ -16,7 +16,7 @@ Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    run keyword and continue on failure    verify link on home page_CDGS2019    coreldraw    essentials    coreldraw/standard    coreldraw
     [Teardown]
 
 Check Link_Special Offer Page_DEV
@@ -39,8 +39,8 @@ Check Link_Special Offer Page_DEV_CDGS_CDGS_CDGS SUB_CAD_CDHS
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    coreldraw    coreldraw
-    \    ...    coreldraw    corel-cad    home-student
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    coreldraw    essentials
+    \    ...    standard    coreldraw    technical-suite
     \    #Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    coreldraw    coreldraw
     \    ...    # coreldraw    @{var}[6]    @{var}[7]
     \    close all browsers
