@@ -164,3 +164,10 @@ Check CDGS product page-license-one time purchase
     Run keyword if    '${SKU}' in 'LCCDGS2020ML'    run keyword and continue on failure    Check promo price on product_CDGS_one time purchase    ${SKU}    ${Full_Reg}    ${SavingBadge}
     ...    ${Full_promo}
     close all browsers
+
+Check CDE product page
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    ${CDE}
+    Check promo price on product_radio_CDHS    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDE}
+    close all browsers
