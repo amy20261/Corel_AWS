@@ -267,6 +267,8 @@ screenshot_coreldraw
     Open browser to page    dev.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/corel-cad
     Open browser to page    dev.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/technical-suite
     Open browser to page    dev.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/home-student
+    Open browser to page    dev.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/coreldraw/essentials
+    Open browser to page    dev.www.coreldraw.public.corel.net    ${lan}    ${currency}    product/coreldraw/standard
     close all browsers
 
 screenshot_coreldraw_No H&S
