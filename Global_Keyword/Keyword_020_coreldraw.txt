@@ -171,3 +171,10 @@ Check CDE product page
     Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    ${CDE}
     Check promo price on product_radio_CDHS    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDE}
     close all browsers
+
+Check CDS product page
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    ${CDS}
+    Check promo price on product_radio_CDHS    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDS}
+    close all browsers
