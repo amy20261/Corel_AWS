@@ -144,3 +144,11 @@ Check price_PTR product page_BOX_45% OFF_DEV
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PTR product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
+
+Check price_PTR product page_BOX_45% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PTR_BOX_45.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PTR product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]

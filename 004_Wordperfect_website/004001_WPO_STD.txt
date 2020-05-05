@@ -90,7 +90,7 @@ Check price_WPO std product page_BOX_40% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_WPO std product page_BOX_SRP_STG
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOSTD_BOX_0.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOSTD_BOX_00.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
