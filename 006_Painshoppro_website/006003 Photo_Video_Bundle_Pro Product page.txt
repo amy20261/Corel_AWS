@@ -72,3 +72,19 @@ Check price_PVB product page_50/40/35% off_STG
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PSB product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_30% off_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_30% off_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]

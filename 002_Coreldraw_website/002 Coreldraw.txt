@@ -9,7 +9,7 @@ Resource          ../Global_Keyword/Keyword_020_coreldraw.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
-Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
+Check Link_Home Page_DEV
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -32,7 +32,7 @@ Check Link_Special Offer Page_DEV
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]
     \    close all browsers
 
-Check Link_Special Offer Page_DEV_CDGS_CDGS_CDGS SUB_CAD_CDHS
+Check Link_Special Offer Page_DEV_CDGS_CDE_CDS CDGS_CDTS
     ${contents}=    Get File    ${CDGS_SP}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -45,7 +45,7 @@ Check Link_Special Offer Page_DEV_CDGS_CDGS_CDGS SUB_CAD_CDHS
     \    ...    # coreldraw    @{var}[6]    @{var}[7]
     \    close all browsers
 
-Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
+Check Link_Home Page_STG
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -68,7 +68,7 @@ Check Link_Special Offer Page_STG
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]
     \    close all browsers
 
-Check Link_Special Offer Page_STG_CDGS_CDGS_CDGS SUB_CAD_CDHS
+Check Link_Special Offer Page_STG_CDGS_CDE_CDS CDGS_CDTS
     ${contents}=    Get File    ${CDGS_SP}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
