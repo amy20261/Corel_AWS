@@ -57,12 +57,12 @@ Verify SavingsBadge
 Verify SavingsBadge_OLD
     [Arguments]    ${SavingBadge}
     sleep    1
-    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline-block;']//p[@data-promo-text='savingsBadge']    ${SavingBadge}
+    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline-block;']/p[@data-promo-text='savingsBadge']    ${SavingBadge}
 
 Verify SavingsBadge_2019
     [Arguments]    ${SavingBadge}
     sleep    3
-    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline;']//span[@style='display: inline-block;']/span[@data-promo-text='savingsBadge']    ${SavingBadge}
+    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline-block;']//p[@data-promo-text='savingsBadge']    ${SavingBadge}
 
 Verify Full_Reg price
     [Arguments]    ${FULL_Reg}
