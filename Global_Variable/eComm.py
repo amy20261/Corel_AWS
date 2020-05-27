@@ -165,6 +165,7 @@ VA_CityStrikePainterBrushPackBundle='C:\\Corel\\Global_Variable\\VA\\VA_CityStri
 VA_ArtisticExplosionParticleShopBrushPackBundle='C:\\Corel\\Global_Variable\\VA\\VA_ArtisticExplosionParticleShopBrushPackBundle.csv'
 VA_BestSellersScriptBundle='C:\\Corel\\Global_Variable\\VA\\VA_BestSellersScriptBundle.csv'
 VA_BestSellersScriptBundl='C:\\Corel\\Global_Variable\\VA\\VA_P_BestSellersScriptBundle.csv'
+VA_PSTB='C:\\Corel\\Global_Variable\\VA\\VA_PSTB.csv'
 
 
 #HTTPS files
