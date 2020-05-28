@@ -218,3 +218,8 @@ LTO should contain_CDGS
     #Run Keyword And Continue On Failure    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
     #Run Keyword And Continue On Failure    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${worth}
     close all browsers
+
+Check VA on PVBU page
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Products Page    ${env}    ${wPSP}    ${Lan}    ${currency}    ${PVBU}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PVBU}    ${currency}    ${worth}
