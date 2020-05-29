@@ -52,7 +52,7 @@ Check Link_Home Page_STG
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    run keyword and continue on failure    verify link on home page_CDGS2019    coreldraw    essentials    coreldraw/standard    coreldraw
     [Teardown]
 
 Check Link_Special Offer Page_STG
