@@ -75,8 +75,8 @@ Check Link_Special Offer Page_STG_CDGS_CDE_CDS CDGS_CDTS
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    STG    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    coreldraw    coreldraw
-    \    ...    coreldraw    corel-cad    home-student
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    coreldraw    essentials
+    \    ...    standard    coreldraw    technical-suite
     \    #Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    coreldraw    coreldraw
     \    ...    # coreldraw    @{var}[6]    @{var}[7]
     \    close all browsers
