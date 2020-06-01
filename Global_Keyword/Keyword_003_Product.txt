@@ -82,7 +82,6 @@ Verify Upgrade_Sale price
 
 Check promo price on product_CDGS_one time purchase
     [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
-    click one time purchase
     Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
