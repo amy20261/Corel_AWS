@@ -30,7 +30,7 @@ Check Link_Special Offer Page_DEV_CDGS_CDGS Sub_PTR-WPO_PSU_ASP_VSU_PVB
     \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    coreldraw    coreldraw
     \    ...    coreldraw    painter    office-suite    paintshop-pro/ultimate    aftershotpro
     \    ...    videostudio/ultimate    photo-video-bundle
-    \    run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019    videostudio/ultimate    coreldraw
+    \    run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_JP    videostudio/ultimate    coreldraw
     \    ...    coreldraw    painter    office-suite    paintshop-pro/ultimate    aftershotpro
     \    ...    videostudio/ultimate    photo-video-bundle
     \    close all browsers
@@ -57,7 +57,7 @@ Check Link_Special Offer Page_STG_CDGS_CDGS Sub_PTR-WPO_PSU_ASP_VSU_PVB
     \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    coreldraw    coreldraw
     \    ...    coreldraw    painter    office-suite    paintshop-pro/ultimate    aftershotpro
     \    ...    videostudio/ultimate    photo-video-bundle
-    \    run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019    videostudio/ultimate    coreldraw
+    \    run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_JP    videostudio/ultimate    coreldraw
     \    ...    coreldraw    painter    office-suite    paintshop-pro/ultimate    aftershotpro
     \    ...    videostudio/ultimate    photo-video-bundle
     \    close all browsers
@@ -143,6 +143,29 @@ verify link in special offer Page_ 2019
     ...    ${Prod 6}    ${Prod 7}    ${Prod 8}
     Click Special Offers Hero_CDGS
     run keyword and continue on failure    Verify URL Contain_Blank    ${Special Offers Hero}
+    Click Prod 1
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 1}
+    Click Prod 2
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 2}
+    Click Prod 3
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 3}
+    Click Prod 4
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 4}
+    Click Prod 5
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 5}
+    Click Prod 6
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 6}
+    Click Prod 7
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 7}
+    Click Prod 8
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 8}
+    close all browsers
+
+verify link in special offer Page_ 2019_JP
+    [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}    ${Prod 5}
+    ...    ${Prod 6}    ${Prod 7}    ${Prod 8}
+    #Click Special Offers Hero_CDGS
+    #run keyword and continue on failure    Verify URL Contain_Blank    ${Special Offers Hero}
     Click Prod 1
     run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 1}
     Click Prod 2
