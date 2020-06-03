@@ -15,33 +15,24 @@ Check Link_Home Page_DEV_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/CDGS
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${Corel}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;cz;pl;tw;cn;ru'    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]
-    \    ...    @{var}[6]
-    \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_CDGS2019_JP    @{var}[3]    @{var}[4]    @{var}[5]
-    \    ...    @{var}[6]
-
-Check Link_Special Offer Page_DEV
-    ${contents}=    Get File    ${Corel_Sp}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${Corel}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]
-    \    ...    @{var}[10]    @{var}[11]
-    \    close all browsers
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;cz;pl;tw;cn;ru'    verify link on home page_CDGS2019    coreldraw    paintshop-pro/ultimate    painter
+    \    ...    videostudio/ultimate
+    \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_CDGS2019_JP    videostudio/ultimate    painter    paintshop-pro/ultimate
+    \    ...    coreldraw
 
 Check Link_Special Offer Page_DEV_CDGS_CDGS Sub_PTR-WPO_PSU_ASP_VSU_PVB
-    ${contents}=    Get File    ${Corel_Sp}
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${Corel}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    coreldraw    painter    @{var}[7]    @{var}[8]    @{var}[9]
-    \    ...    @{var}[10]    @{var}[11]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    coreldraw    coreldraw
+    \    ...    coreldraw    painter    office-suite    paintshop-pro/ultimate    aftershotpro
+    \    ...    videostudio/ultimate    photo-video-bundle
+    \    run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019    videostudio/ultimate    coreldraw
+    \    ...    coreldraw    painter    office-suite    paintshop-pro/ultimate    aftershotpro
+    \    ...    videostudio/ultimate    photo-video-bundle
     \    close all browsers
 
 Check Link_Home Page_STG_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/CDGS
@@ -51,33 +42,24 @@ Check Link_Home Page_STG_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/CDGS
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    stg    ${Corel}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;cz;pl;tw;cn;ru'    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]
-    \    ...    @{var}[6]
-    \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_CDGS2019_JP    @{var}[3]    @{var}[4]    @{var}[5]
-    \    ...    @{var}[6]
-
-Check Link_Special Offer Page_STG
-    ${contents}=    Get File    ${Corel_Sp}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${Corel}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]
-    \    ...    @{var}[10]    @{var}[11]
-    \    close all browsers
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;cz;pl;tw;cn;ru'    verify link on home page_CDGS2019    coreldraw    paintshop-pro/ultimate    painter
+    \    ...    videostudio/ultimate
+    \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_CDGS2019_JP    videostudio/ultimate    painter    paintshop-pro/ultimate
+    \    ...    coreldraw
 
 Check Link_Special Offer Page_STG_CDGS_CDGS Sub_PTR-WPO_PSU_ASP_VSU_PVB
-    ${contents}=    Get File    ${Corel_Sp}
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    stg    ${Corel}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    coreldraw    painter    @{var}[7]    @{var}[8]    @{var}[9]
-    \    ...    @{var}[10]    @{var}[11]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    coreldraw    coreldraw
+    \    ...    coreldraw    painter    office-suite    paintshop-pro/ultimate    aftershotpro
+    \    ...    videostudio/ultimate    photo-video-bundle
+    \    run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019    videostudio/ultimate    coreldraw
+    \    ...    coreldraw    painter    office-suite    paintshop-pro/ultimate    aftershotpro
+    \    ...    videostudio/ultimate    photo-video-bundle
     \    close all browsers
 
 Check Hero _Home Page_BN1
