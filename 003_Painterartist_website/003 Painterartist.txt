@@ -9,46 +9,48 @@ Resource          ../Global_Keyword/Keyword_030_painterartist.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
-Check Link_Home Page_DEV_PTR_PE_Particleshop_brush_2019
-    ${contents}=    Get File    ${PTR_Home}
+Check Link_Home Page_DEV
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wPTR}    @{var}[1]    @{var}[2]
-    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify link on home page_2019    painter    painter-essentials    painter-essentials
+    \    ...    brushes
     [Teardown]
 
 Check Link_Special Offer Page_DEV
-    ${contents}=    Get File    ${PTR_SP}
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wPTR}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    painter    painter
+    \    ...    particleshop    painter-essentials    brush
     \    close all browsers
 
-Check Link_Home Page_STG_PTR_PE_Particleshop_brush_2019
-    ${contents}=    Get File    ${PTR_Home}
+Check Link_Home Page_STG
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    stg    ${wPTR}    @{var}[1]    @{var}[2]
-    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify link on home page_2019    painter    painter-essentials    painter-essentials
+    \    ...    brushes
     [Teardown]
 
 Check Link_Special Offer Page_STG
-    ${contents}=    Get File    ${PTR_SP}
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    stg    ${wPTR}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    painter    painter
+    \    ...    particleshop    painter-essentials    brush
     \    close all browsers
 
 Check Trial down_Home Page_DEV

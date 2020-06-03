@@ -10,75 +10,47 @@ Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
 Check Link_Home Page_DEV
-    ${contents}=    Get File    ${CDGS_Home}
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link on home page_CDGS2019    coreldraw    essentials    coreldraw/standard    coreldraw
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;cz;pl;tw;cn;ru;jp'    verify link on home page_CDGS2019    coreldraw    essentials    coreldraw/standard
+    \    ...    coreldraw
     [Teardown]
 
 Check Link_Special Offer Page_DEV
-    ${contents}=    Get File    ${CDGS_SP}
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
-    \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
-    \    close all browsers
-
-Check Link_Special Offer Page_DEV_CDGS_CDE_CDS CDGS_CDTS
-    ${contents}=    Get File    ${CDGS_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    coreldraw    essentials
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    coreldraw    essentials
     \    ...    standard    coreldraw    technical-suite
-    \    #Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    coreldraw    coreldraw
-    \    ...    # coreldraw    @{var}[6]    @{var}[7]
     \    close all browsers
 
 Check Link_Home Page_STG
-    ${contents}=    Get File    ${CDGS_Home}
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link on home page_CDGS2019    coreldraw    essentials    coreldraw/standard    coreldraw
+    \    Open Browser to Home Page    STG    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;cz;pl;tw;cn;ru;jp'    verify link on home page_CDGS2019    coreldraw    essentials    coreldraw/standard
+    \    ...    coreldraw
     [Teardown]
 
 Check Link_Special Offer Page_STG
-    ${contents}=    Get File    ${CDGS_SP}
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
-    \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
-    \    close all browsers
-
-Check Link_Special Offer Page_STG_CDGS_CDE_CDS CDGS_CDTS
-    ${contents}=    Get File    ${CDGS_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    STG    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    coreldraw    essentials
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    coreldraw    essentials
     \    ...    standard    coreldraw    technical-suite
-    \    #Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    coreldraw    coreldraw
-    \    ...    # coreldraw    @{var}[6]    @{var}[7]
     \    close all browsers
 
 Check LTO _Home Page

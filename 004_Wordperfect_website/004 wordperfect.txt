@@ -9,66 +9,48 @@ Resource          ../Global_Keyword/Keyword_040_wordperfect.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
-Check Link_Home Page_DEV_Std_Pro_HS_PDF_2019
-    ${contents}=    Get File    ${WPO_Home}
+Check Link_Home Page_DEV
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wWPO}    @{var}[1]    @{var}[2]
-    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify link on home page_2019    office-suite    professional-edition    home-student
+    \    ...    pdf-creator
     [Teardown]
 
-Check Link_Special Offer Hero_DEV
-    ${contents}=    Get File    ${WPO_sp}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    DEV    ${wWPO}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
 Check Link_Special Offer Page_DEV
-    ${contents}=    Get File    ${WPO_SP}
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wWPO}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    office-suite    office-suite
+    \    ...    professional-edition    home-student    pdf-creator
     \    close all browsers
 
-Check Link_Home Page_STG_Std_Pro_HS_PDF_2019
-    ${contents}=    Get File    ${WPO_Home}
+Check Link_Home Page_STG
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    stg    ${wWPO}    @{var}[1]    @{var}[2]
-    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify link on home page_2019    office-suite    professional-edition    home-student
+    \    ...    pdf-creator
     [Teardown]
 
-Check Link_Special Offer Hero_STG
-    ${contents}=    Get File    ${WPO_sp}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wWPO}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
 Check Link_Special Offer Page_STG
-    ${contents}=    Get File    ${WPO_SP}
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    stg    ${wWPO}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    office-suite    office-suite
+    \    ...    professional-edition    home-student    pdf-creator
     \    close all browsers
 
 Check Trial down_Home Page
@@ -162,8 +144,7 @@ Check HSW _Free Trial Page_BN1
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Free Trial Page    ${env}    ${wWPO}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en'         @{var}[3]    @{var}[5]
-    \    ...    @{var}[4]
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en'    @{var}[3]    @{var}[5]    @{var}[4]
     \    close all browsers
     [Teardown]
 
