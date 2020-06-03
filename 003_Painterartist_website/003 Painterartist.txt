@@ -16,7 +16,7 @@ Check Link_Home Page_DEV
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wPTR}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify link on home page_2019    painter    painter-essentials    painter-essentials
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify link on home page_2019    painter    painter-essentials    particleshop
     \    ...    brushes
     [Teardown]
 
@@ -38,7 +38,7 @@ Check Link_Home Page_STG
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    stg    ${wPTR}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify link on home page_2019    painter    painter-essentials    painter-essentials
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify link on home page_2019    painter    painter-essentials    particleshop
     \    ...    brushes
     [Teardown]
 

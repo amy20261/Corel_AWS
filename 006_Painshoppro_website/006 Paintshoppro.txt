@@ -9,112 +9,48 @@ Resource          ../Global_Keyword/Keyword_050_paintershoppro.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
-Check Link_Home Page_DEV_PSU_PSP_PSU_PVB_Photomirage_particleshop_2019
-    ${contents}=    Get File    ${PSP_Home_2019}
+Check Link_Home Page_DEV
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
-    \    ...    @{var}[8]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;la;tw;ru;jp'    verify link on home page_2019    paintshop-pro/standard    paintshop-pro/standard    paintshop-pro/ultimate
+    \    ...    photo-video-bundle
     [Teardown]
 
-Check Link_Special Offer Hero_DEV
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    DEV    ${wPSP}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
-Check Link_Special Offer Page_DEV_PSU_PSU_PSP_PM_PVB
-    ${contents}=    Get File    ${PSP_SP}
+Check Link_Special Offer Page_DEV
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-    \    ...    @{var}[7]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard
+    \    ...    paintshop-pro/ultimate    photo-video-bundle    photomirage
     \    close all browsers
 
-Check Link_Special Offer Page_DEV_PSU_PSP_PSU_PVB_PM
-    ${contents}=    Get File    ${PSP_SP}
+Check Link_Home Page_STG
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard    paintshop-pro/ultimate    photo-video-bundle
-    \    ...    photomirage
-    \    close all browsers
-
-Check Link_Special Offer Page_DEV_PSU_PSU_PSP_PVB_PM
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle
-    \    ...    photomirage
-    \    close all browsers
-
-Check Link_Home Page_stg_PSU_PSP_PSU_PVB_Photomirage_particleshop_2019
-    ${contents}=    Get File    ${PSP_Home_2019}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
-    \    ...    @{var}[8]
+    \    Open Browser to Home Page    sttg    ${wPSP}    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;la;tw;ru;jp'    verify link on home page_2019    paintshop-pro/standard    paintshop-pro/standard    paintshop-pro/ultimate
+    \    ...    photo-video-bundle
     [Teardown]
 
-Check Link_Special Offer Hero_stg
-    ${contents}=    Get File    ${PSP_SP}
+Check Link_Special Offer Page_STG
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
-Check Link_Special Offer Page_STG_PSU_PSU_PSP_PM_PVB
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-    \    ...    @{var}[7]
-    \    close all browsers
-
-Check Link_Special Offer Page_STG_PSU_PSP_PSU_PVB_PM
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard    paintshop-pro/ultimate    photo-video-bundle
-    \    ...    photomirage
-    \    close all browsers
-
-Check Link_Special Offer Page_STG_PSU_PSU_PSP_PVB_PM
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle
-    \    ...    photomirage
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard
+    \    ...    paintshop-pro/ultimate    photo-video-bundle    photomirage
     \    close all browsers
 
 Check Tiral down_Home Page
@@ -233,10 +169,6 @@ verify link on home page_2019
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
     Run Keyword And Continue On Failure    Click Featured Prod 3
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
-    #Run Keyword And Continue On Failure    Click Horizontal 1
-    #Run Keyword And Continue On Failure    Verify URL Contain_blank    ${Horizontal 1}
-    #Run Keyword And Continue On Failure    Click Horizontal 2
-    #Run Keyword And Continue On Failure    Verify URL Contain_blank    ${Horizontal 2}
     close all browsers
 
 verify link in special offer Hero_ 2019
