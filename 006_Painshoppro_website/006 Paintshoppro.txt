@@ -16,7 +16,7 @@ Check Link_Home Page_DEV
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;la;tw;ru;jp'    verify link on home page_2019    paintshop-pro/standard    paintshop-pro/standard    paintshop-pro/ultimate
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;tw;ru;jp'    verify link on home page_2019    paintshop-pro/standard    paintshop-pro/standard    paintshop-pro/ultimate
     \    ...    photo-video-bundle
     [Teardown]
 
@@ -27,7 +27,7 @@ Check Link_Special Offer Page_DEV
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;tw;ru;jp'    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard
     \    ...    paintshop-pro/ultimate    photo-video-bundle    photomirage
     \    close all browsers
 
@@ -38,7 +38,7 @@ Check Link_Home Page_STG
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    sttg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;la;tw;ru;jp'    verify link on home page_2019    paintshop-pro/standard    paintshop-pro/standard    paintshop-pro/ultimate
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;tw;ru;jp'    verify link on home page_2019    paintshop-pro/standard    paintshop-pro/standard    paintshop-pro/ultimate
     \    ...    photo-video-bundle
     [Teardown]
 
@@ -49,7 +49,7 @@ Check Link_Special Offer Page_STG
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;tw;ru;jp'    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard
     \    ...    paintshop-pro/ultimate    photo-video-bundle    photomirage
     \    close all browsers
 
