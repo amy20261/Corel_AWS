@@ -27,7 +27,7 @@ Check Link_Special Offer Page_DEV
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;tw;ru;jp'    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard
     \    ...    paintshop-pro/ultimate    photo-video-bundle    photomirage
     \    close all browsers
 
@@ -49,7 +49,7 @@ Check Link_Special Offer Page_STG
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;tw;ru;jp'    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard
     \    ...    paintshop-pro/ultimate    photo-video-bundle    photomirage
     \    close all browsers
 
@@ -160,7 +160,7 @@ Check HSW _Free Trial Page_BN1
 
 *** Keywords ***
 verify link on home page_2019
-    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Horizontal 1}    ${Horizontal 2}
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Run Keyword And Continue On Failure    Click HeroBanner_2019_EN
     Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
     Run Keyword And Continue On Failure    Click Featured Prod 1
