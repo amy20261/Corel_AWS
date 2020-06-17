@@ -1,4 +1,4 @@
 Get-ChildItem 'C:\Corel\Global_Variable\Data\*.CSV' -Recurse | ForEach {
-(Get-Content $_ | ForEach { $_ -replace 'ESDVS2019PRML', 'ESDVS2020PRML' }) |
+(Get-Content $_ | ForEach { $_ -replace 'CDGS2019', 'CDGS2020' }) |
 Set-Content $_
 }
