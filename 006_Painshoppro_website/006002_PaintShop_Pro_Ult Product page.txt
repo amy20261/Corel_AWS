@@ -152,3 +152,19 @@ Check price_PSU product page_40% OFF_STG
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PSU product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_35% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU35.csv
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_35% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU35.csv
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page    STG    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
