@@ -16,7 +16,7 @@ Check Link_Home Page_DEV
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    verify link on home page_2019    paintshop-pro/standard    paintshop-pro/standard    paintshop-pro/ultimate
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    verify link on home page_2019    paintshop-pro/ultimate    paintshop-pro/standard    paintshop-pro/ultimate
     \    ...    photo-video-bundle
     [Teardown]
 
