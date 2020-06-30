@@ -34,7 +34,7 @@ Check price_VSP product page_20% Off_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_30% Off_DEV
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\VSP30.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\VSP_BOX_30.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -74,7 +74,7 @@ Check price_VSP product page_20% Off_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_30% Off_STG
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\VSP30.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\VSP_BOX_30.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
