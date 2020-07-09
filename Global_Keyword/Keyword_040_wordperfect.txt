@@ -16,8 +16,8 @@ Check WPO pro product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wWPO}    en    ${currency}    ${WPOPRO}
-    Run keyword if    '${SKU}' in "ESDWPX9PREF;ESDWPX9PREFUG"    run keyword and continue on failure    Check promo price on product_dropdown list_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}
-    ...    ${Full_promo}    ${UWPOPRO}    ${OWPOPRO}    ${XWPOPRO}
+    run keyword and continue on failure    Check promo price on product_dropdown list_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOPRO}
+    ...    ${OWPOPRO}    ${XWPOPRO}
     close all browsers
 
 Check WPO HS product page
