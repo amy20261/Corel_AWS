@@ -34,7 +34,7 @@ Check price_particleshop product page_15% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_particleshop product page_20% OFF_DEV
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\Particleshop20.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\Particleshop_20.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -74,7 +74,7 @@ Check price_particleshop product page_15% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_particleshop product page_20% OFF_STG
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\Particleshop20.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\Particleshop_20.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
