@@ -53,6 +53,5 @@ Check PE7 product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wPTR}    en    ${currency}    ${PE}
-    Run keyword if    '${SKU}' == '${CPE}'    run keyword and continue on failure    Check promo price on product_dropdown list_PE6    ${SKU}    ${Full_Reg}    ${SavingBadge}
-    ...    ${Full_promo}    ${UPE}
+    run keyword and continue on failure    Check promo price on product_dropdown list_PE6    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPE}
     close all browsers
