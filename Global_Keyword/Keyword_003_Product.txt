@@ -90,7 +90,7 @@ Check promo price on product_CDGS_one time purchase
 Check promo price on product_radio_CDHS
     [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}
     Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_radio button
-    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2020    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
