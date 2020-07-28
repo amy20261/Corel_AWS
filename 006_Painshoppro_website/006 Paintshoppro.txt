@@ -54,13 +54,22 @@ Check Link_Special Offer Page_STG
     \    close all browsers
 
 Check Tiral down_Home Page
-    ${contents}=    Get File    ${PSP_Home}
+    ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    run keyword and continue on failure    verify trial download on home page
+
+Check Tiral down_trial Page
+    ${contents}=    Get File    ${Corel_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to free Trial Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    run keyword and continue on failure    verify trial download on home page
 
 Check LTO_Home Page
     ${contents}=    Get File    ${PSP_Home_2019}
@@ -192,7 +201,6 @@ verify link in special offer Page_ 2019
     close all browsers
 
 verify trial download on home page
-    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Run Keyword And Continue On Failure    Click Trial download_PSP
     Run Keyword And Continue On Failure    Verify URL Contain    trial-thank-you
     close all browsers
