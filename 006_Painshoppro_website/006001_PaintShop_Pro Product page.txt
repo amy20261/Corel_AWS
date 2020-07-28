@@ -10,7 +10,7 @@ Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
 Check price_PSP product page_SRP_dev
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP00.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_srp.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -18,7 +18,7 @@ Check price_PSP product page_SRP_dev
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_SRP_stg
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP00.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_srp.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
