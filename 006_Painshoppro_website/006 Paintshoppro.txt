@@ -167,6 +167,24 @@ Check HSW _Free Trial Page_BN1
     \    close all browsers
     [Teardown]
 
+Check Tiral down_Home Page_STG
+    ${contents}=    Get File    ${Corel_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    run keyword and continue on failure    verify trial download on home page
+
+Check Tiral down_trial Page_STG
+    ${contents}=    Get File    ${Corel_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to free Trial Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    run keyword and continue on failure    verify trial download on home page
+
 *** Keywords ***
 verify link on home page_2019
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}

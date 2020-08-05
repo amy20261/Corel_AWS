@@ -97,3 +97,19 @@ Check PVBU product page
     Check promo price on product_dropdown list_PSP    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPVB}    ${OPVB}
     ...    ${XPVB}
     close all browsers
+
+Check SKU on PVBU_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Products Page    dev    ${wPSP}    ${lan}    ${currency}    ${PVBU}
+    Check sku array
+    Check SKU    ${KPVBU}
+    close all browsers
+
+Check SKU on PVBU_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Products Page    stg    ${wPSP}    ${lan}    ${currency}    ${PVBU}
+    Check sku array
+    Check SKU    ${KPVBU}
+    close all browsers

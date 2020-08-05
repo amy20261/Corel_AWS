@@ -70,3 +70,69 @@ Check SKU on PVB_STG_ALL LAN
     Check SKU on PVB_STG    en    es-AR
     Check SKU on PVB_STG    en    en-ZA
     Check SKU on PVB_STG    en    en-SG
+
+Check SKU on PVBU_DEV_ALL LAN
+    Check SKU on PVBU_DEV    en    en-US
+    Check SKU on PVBU_DEV    en    en-CA
+    Check SKU on PVBU_DEV    en    en-GB
+    Check SKU on PVBU_DEV    en    en-AU
+    Check SKU on PVBU_DEV    en    en-NZ
+    Check SKU on PVBU_DEV    de    de-DE
+    Check SKU on PVBU_DEV    fr    fr-FR
+    Check SKU on PVBU_DEV    it    it-IT
+    Check SKU on PVBU_DEV    nl    nl-NL
+    #Check SKU on PVB_SKU_DEV    br    pt-BR
+    Check SKU on PVBU_DEV    jp    ja-JP
+    Check SKU on PVBU_DEV    tw    zh-TW
+    #Check SKU on PVB_SKU_DEV    cn    zh-HK
+    Check SKU on PVBU_DEV    en    en-IE
+    Check SKU on PVBU_DEV    en    en-RW
+    #Check SKU on PVB_SKU_DEV    la    es-ES
+    #Check SKU on PVB_SKU_DEV    pl    pl-PL
+    #Check SKU on PVB_SKU_DEV    ru    ru-RU
+    #Check SKU on PVB_SKU_DEV    cz    cs-CZ
+    Check SKU on PVBU_DEV    en    da-DK
+    Check SKU on PVBU_DEV    en    de-Li
+    Check SKU on PVBU_DEV    en    nb-NO
+    Check SKU on PVBU_DEV    en    se-SE
+    Check SKU on PVBU_DEV    en    ko-KR
+    Check SKU on PVBU_DEV    en    es-PE
+    Check SKU on PVBU_DEV    en    es-MX
+    Check SKU on PVBU_DEV    en    es-CO
+    Check SKU on PVBU_DEV    en    es-CL
+    Check SKU on PVBU_DEV    en    es-AR
+    Check SKU on PVBU_DEV    en    en-ZA
+    Check SKU on PVBU_DEV    en    en-SG
+
+Check SKU on PVBU_stg_ALL LAN
+    Check SKU on PVBU_stg    en    en-US
+    Check SKU on PVBU_stg    en    en-CA
+    Check SKU on PVBU_stg    en    en-GB
+    Check SKU on PVBU_stg    en    en-AU
+    Check SKU on PVBU_stg    en    en-NZ
+    Check SKU on PVBU_stg    de    de-DE
+    Check SKU on PVBU_stg    fr    fr-FR
+    Check SKU on PVBU_stg    it    it-IT
+    Check SKU on PVBU_stg    nl    nl-NL
+    #Check SKU on PVB_SKU_stg    br    pt-BR
+    Check SKU on PVBU_stg    jp    ja-JP
+    Check SKU on PVBU_stg    tw    zh-TW
+    #Check SKU on PVB_SKU_stg    cn    zh-HK
+    Check SKU on PVBU_stg    en    en-IE
+    Check SKU on PVBU_stg    en    en-RW
+    #Check SKU on PVB_SKU_stg    la    es-ES
+    #Check SKU on PVB_SKU_stg    pl    pl-PL
+    #Check SKU on PVB_SKU_stg    ru    ru-RU
+    #Check SKU on PVB_SKU_stg    cz    cs-CZ
+    Check SKU on PVBU_stg    en    da-DK
+    Check SKU on PVBU_stg    en    de-Li
+    Check SKU on PVBU_stg    en    nb-NO
+    Check SKU on PVBU_stg    en    se-SE
+    Check SKU on PVBU_stg    en    ko-KR
+    Check SKU on PVBU_stg    en    es-PE
+    Check SKU on PVBU_stg    en    es-MX
+    Check SKU on PVBU_stg    en    es-CO
+    Check SKU on PVBU_stg    en    es-CL
+    Check SKU on PVBU_stg    en    es-AR
+    Check SKU on PVBU_stg    en    en-ZA
+    Check SKU on PVBU_stg    en    en-SG
