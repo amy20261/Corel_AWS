@@ -53,7 +53,7 @@ Check SKU on PSP_STG
     Check SKU    ${KPSP}
     Check UP SKU    ${UPSP}
     run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPSP}
-    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPSP}
+    #run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPSP}
     close all browsers
 
 Check SKU on PSU_DEV
