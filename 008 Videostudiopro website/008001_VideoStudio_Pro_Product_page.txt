@@ -87,7 +87,7 @@ Check price_VSP product page_35% Off_STG
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSP product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]Check
+    \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_4025% Off_DEV
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\VSP2540.csv
