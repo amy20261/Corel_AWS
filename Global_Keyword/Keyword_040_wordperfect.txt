@@ -8,16 +8,16 @@ Check WPO std product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wWPO}    en    ${currency}    ${WPOSTD}
-    run keyword and continue on failure    Check promo price on product_dropdown list_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOSTD}
-    ...    ${OWPOSTD}    ${XWPOSTD}
+    runkeyword if     '${SKU}'=="ESDWP2020STDEF"    run keyword and continue on failure    Check promo price on product_dropdown list_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}
+    ...    ${Full_promo}    ${UWPOSTD}    ${OWPOSTD}    ${XWPOSTD}
     close all browsers
 
 Check WPO pro product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wWPO}    en    ${currency}    ${WPOPRO}
-    run keyword and continue on failure    Check promo price on product_dropdown list_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOPRO}
-    ...    ${OWPOPRO}    ${XWPOPRO}
+    runkeyword if     '${SKU}'=="ESDWP2020PREF"    run keyword and continue on failure    Check promo price on product_dropdown list_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}
+    ...    ${Full_promo}    ${UWPOPRO}    ${OWPOPRO}    ${XWPOPRO}
     close all browsers
 
 Check WPO HS product page
