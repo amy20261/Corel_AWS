@@ -1,0 +1,90 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          ../Global_Keyword/Keyword_040_wordperfect.txt
+Variables         ../Global_Variable/eComm.py
+
+*** Test Cases ***
+Check price_WPO HS product page_BOX_SRP_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOHS00.csv
+    @{lines}=    Split to lines    ${contents}
+    FOR    ${line}    IN    @{lines}
+        @{var}=    split string    ${line}    ;
+        run keyword and continue on failure    Check WPO HS product page    stg    ${var}[0]    ${var}[1]    ${var}[4]    ${var}[7]    ${var}[5]
+    END
+
+Check price_WPO HS product page_BOX_05% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOHS_BOX_05.csv
+    @{lines}=    Split to lines    ${contents}
+    FOR    ${line}    IN    @{lines}
+        @{var}=    split string    ${line}    ;
+        run keyword and continue on failure    Check WPO HS product page    stg    ${var}[0]    ${var}[1]    ${var}[4]    ${var}[7]    ${var}[5]
+    END
+
+Check price_WPO HS product page_BOX_10% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOHS_BOX_10.csv
+    @{lines}=    Split to lines    ${contents}
+    FOR    ${line}    IN    @{lines}
+        @{var}=    split string    ${line}    ;
+        run keyword and continue on failure    Check WPO HS product page    stg    ${var}[0]    ${var}[1]    ${var}[4]    ${var}[7]    ${var}[5]
+    END
+
+Check price_WPO HS product page_BOX_15% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOHS_BOX_15.csv
+    @{lines}=    Split to lines    ${contents}
+    FOR    ${line}    IN    @{lines}
+        @{var}=    split string    ${line}    ;
+        run keyword and continue on failure    Check WPO HS product page    stg    ${var}[0]    ${var}[1]    ${var}[4]    ${var}[7]    ${var}[5]
+    END
+
+Check price_WPO HS product page_BOX_20% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOHS20.csv
+    @{lines}=    Split to lines    ${contents}
+    FOR    ${line}    IN    @{lines}
+        @{var}=    split string    ${line}    ;
+        run keyword and continue on failure    Check WPO HS product page    stg    ${var}[0]    ${var}[1]    ${var}[4]    ${var}[7]    ${var}[5]
+    END
+
+Check price_WPO HS product page_BOX_20-15% OFF_stg
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOHS_BOX_2015.csv
+    @{lines}=    Split to lines    ${contents}
+    FOR    ${line}    IN    @{lines}
+        @{var}=    split string    ${line}    ;
+        run keyword and continue on failure    Check WPO HS product page    stg    ${var}[0]    ${var}[1]    ${var}[4]    ${var}[7]    ${var}[5]
+    END
+
+Check price_WPO HS product page_BOX_35% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOHS35.csv
+    @{lines}=    Split to lines    ${contents}
+    FOR    ${line}    IN    @{lines}
+        @{var}=    split string    ${line}    ;
+        run keyword and continue on failure    Check WPO HS product page    stg    ${var}[0]    ${var}[1]    ${var}[4]    ${var}[7]    ${var}[5]
+    END
+
+Check price_WPO HS product page_BOX_50% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOHS50.csv
+    @{lines}=    Split to lines    ${contents}
+    FOR    ${line}    IN    @{lines}
+        @{var}=    split string    ${line}    ;
+        run keyword and continue on failure    Check WPO HS product page    stg    ${var}[0]    ${var}[1]    ${var}[4]    ${var}[7]    ${var}[5]
+    END
+
+Check price_WPO HS product page_BOX_25% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOHS_25.csv
+    @{lines}=    Split to lines    ${contents}
+    FOR    ${line}    IN    @{lines}
+        @{var}=    split string    ${line}    ;
+        run keyword and continue on failure    Check WPO HS product page    stg    ${var}[0]    ${var}[1]    ${var}[4]    ${var}[7]    ${var}[5]
+    END
+
+Check price_WPO HS product page_BOX_25% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOHS_25.csv
+    @{lines}=    Split to lines    ${contents}
+    FOR    ${line}    IN    @{lines}
+        @{var}=    split string    ${line}    ;
+        run keyword and continue on failure    Check WPO HS product page    stg    ${var}[0]    ${var}[1]    ${var}[4]    ${var}[7]    ${var}[5]
+    END

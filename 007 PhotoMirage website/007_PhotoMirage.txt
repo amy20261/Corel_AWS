@@ -9,26 +9,6 @@ Resource          ../Global_Keyword/Keyword_055_photomirage.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
-Screenshot_PhotoMirage_all Lan_DEV
-    [Timeout]
-    screenshot_PhotoMirage_dev    en    en-US
-    screenshot_PhotoMirage_dev    en    en-CA
-    screenshot_PhotoMirage_dev    en    en-GB
-    screenshot_PhotoMirage_dev    en    en-AU
-    screenshot_PhotoMirage_dev    en    en-NZ
-    screenshot_PhotoMirage_dev    en    en-IE
-    screenshot_PhotoMirage_dev    en    nb-NO
-    screenshot_PhotoMirage_dev    en    pl-PL
-    screenshot_PhotoMirage_dev    en    ru-RU
-    screenshot_PhotoMirage_dev    en    de-DE
-    screenshot_PhotoMirage_dev    en    fr-FR
-    screenshot_PhotoMirage_dev    en    it-IT
-    screenshot_PhotoMirage_dev    en    nl-NL
-    screenshot_PhotoMirage_dev    en    se-SE
-    screenshot_PhotoMirage_dev    en    ja-JP
-    screenshot_PhotoMirage_dev    en    es-MX
-    screenshot_PhotoMirage_dev    en    es-ES
-
 Screenshot_PhotoMirage_all Lan_STG
     [Timeout]
     screenshot_PhotoMirage_stg    en    en-US
@@ -49,33 +29,13 @@ Screenshot_PhotoMirage_all Lan_STG
     screenshot_PhotoMirage_stg    en    es-MX
     screenshot_PhotoMirage_stg    en    es-ES
 
-Screenshot_PhotoMirage_all Lan_PRO
-    [Timeout]
-    screenshot_PhotoMirage_pro    en    en-US
-    screenshot_PhotoMirage_pro    en    en-CA
-    screenshot_PhotoMirage_pro    en    en-GB
-    screenshot_PhotoMirage_pro    en    en-AU
-    screenshot_PhotoMirage_pro    en    en-NZ
-    screenshot_PhotoMirage_pro    en    en-IE
-    screenshot_PhotoMirage_pro    en    nb-NO
-    screenshot_PhotoMirage_pro    en    pl-PL
-    screenshot_PhotoMirage_pro    en    ru-RU
-    screenshot_PhotoMirage_pro    en    de-DE
-    screenshot_PhotoMirage_pro    en    fr-FR
-    screenshot_PhotoMirage_pro    en    it-IT
-    screenshot_PhotoMirage_pro    en    nl-NL
-    screenshot_PhotoMirage_pro    en    se-SE
-    screenshot_PhotoMirage_pro    en    ja-JP
-    screenshot_PhotoMirage_pro    en    es-MX
-    screenshot_PhotoMirage_pro    en    es-ES
-
 Check price_photomirage page
     ${contents}=    Get File    ${PhotoMirage_file}
     @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check Photomirage page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
+    FOR    ${line}    IN    @{lines}
+        @{var}=    split string    ${line}    ;
+        run keyword and continue on failure    Check Photomirage page    ${env}    ${var}[0]    ${var}[1]    ${var}[4]    ${var}[7]    ${var}[5]
+    END
 
 *** Keywords ***
 Open browser to home

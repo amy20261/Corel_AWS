@@ -4,7 +4,7 @@ Variables         ../Global_Variable/eComm.py
 Library           Selenium2Library
 
 *** Test Cases ***
-Screenshot_corel
+Corel
     screenshot_Corel    en    en-US
     screenshot_Corel    en    en-CA
     screenshot_Corel    en    en-GB
@@ -375,7 +375,7 @@ screenshot_DVD
 Open browser to home
     [Arguments]    ${microsite}=dev.www.corel.public.corel.net    ${lan}=en    ${currency}=en-US
     Run Keyword And Continue On Failure    remove file    c:/temp/dev/${microsite}/Home_${currency}.png
-    open browser    https://${microsite}/${lan}/?currency=${currency}
+    open browser    https://${microsite}/${lan}/?currency=${currency}    ie
     Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/?currency=${currency}
     Maximize Browser Window
     sleep    1
