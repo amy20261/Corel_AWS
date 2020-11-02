@@ -21,7 +21,7 @@ Click HeroBanner_Corel_2019_JP
     run keyword and continue on failure    click element    //header//a[@class='btn btn-learn-more']
 
 Click Featured Prod 1_corel
-    click element    //div[1][@class='col-xs-4 module-col']//span[@class='link']
+    click element    //div[2][@class='col-xs-4 module-col']//span[@class='link']
 
 Click Featured Prod 2_corel
     click element    //div[2][@class='col-xs-4 module-col']//span[@class='link']

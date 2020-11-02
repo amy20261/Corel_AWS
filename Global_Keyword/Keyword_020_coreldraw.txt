@@ -8,8 +8,7 @@ Check CDGS product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
-    runkeyword if     '${SKU}'=="ESDCDGS2020AM"    run keyword and continue on failure    Check promo price on product_CDGS_one time purchase    ${SKU}    ${Full_Reg}    ${SavingBadge}
-    ...    ${Full_promo}
+    runkeyword if    '${SKU}'=="ESDCDGS2020AM"    run keyword and continue on failure    Check promo price on product_CDGS_one time purchase    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
     close all browsers
 
 Check CDHS product page
@@ -23,16 +22,14 @@ Check CAD product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    ${CAD}
-    runkeyword if     '${SKU}'=="ESDCCAD2020ML"    run keyword and continue on failure    Check promo price on product_dropdown list_CAD    ${SKU}    ${Full_Reg}    ${SavingBadge}
-    ...    ${Full_promo}    ${UCAD}    ${OCAD}    ${XCAD}
+    runkeyword if    '${SKU}'=="ESDCCAD2020ML"    run keyword and continue on failure    Check promo price on product_dropdown list_CAD    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCAD}    ${OCAD}    ${XCAD}
     close all browsers
 
 Check CDTS product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    ${CDTS}
-    runkeyword if     '${SKU}'=="ESDCDTS2020ML"    run keyword and continue on failure    Check promo price on product_radio_CDTS    ${SKU}    ${Full_Reg}    ${SavingBadge}
-    ...    ${Full_promo}    ${UCDTS}    ${OCDTS}    ${XCDTS}
+    runkeyword if    '${SKU}'=="ESDCDTS2020ML"    run keyword and continue on failure    Check promo price on product_radio_CDTS    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDTS}    ${OCDTS}    ${XCDTS}
     close all browsers
 
 Check SKU on CDGS_DEV
@@ -129,40 +126,35 @@ Check CDGS product page-one time purchase
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
-    Run keyword if    '${SKU}' in 'ESDCDGS2020AM'    run keyword and continue on failure    Check promo price on product_CDGS_one time purchase    ${SKU}    ${Full_Reg}    ${SavingBadge}
-    ...    ${Full_promo}
+    Run keyword if    '${SKU}' in 'ESDCDGS2020AM'    run keyword and continue on failure    Check promo price on product_CDGS_one time purchase    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
     close all browsers
 
 Check CDGS product page-annual subscription
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
-    Run keyword if    '${SKU}' in 'CDGSSUBPUREPREM2'    run keyword and continue on failure    Check promo price on product_CDGS_annual subscription    ${SKU}    ${Full_Reg}    ${SavingBadge}
-    ...    ${Full_promo}
+    Run keyword if    '${SKU}' in 'CDGSSUBPUREPREM2'    run keyword and continue on failure    Check promo price on product_CDGS_annual subscription    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
     close all browsers
 
 Check CDGS product page-Upgrade
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open browserto pages    ${env}    ${wCDGS}    en    ${currency}    upgrade
-    Run keyword if    '${SKU}' in 'CDGSSUBPUREPREM2'    run keyword and continue on failure    Check promo price on product_CDGS_upgrade    ${SKU}    ${Full_Reg}    ${SavingBadge}
-    ...    ${Full_promo}
+    Run keyword if    '${SKU}' in 'CDGSSUBPUREPREM2'    run keyword and continue on failure    Check promo price on product_CDGS_upgrade    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
     close all browsers
 
 Check CDGS product page-license-annual subscription
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    license
-    Run keyword if    '${SKU}' in 'CDGSSUBPUREPREM2'    run keyword and continue on failure    Check promo price on product_CDGS_annual subscription    ${SKU}    ${Full_Reg}    ${SavingBadge}
-    ...    ${Full_promo}
+    Run keyword if    '${SKU}' in 'CDGSSUBPUREPREM2'    run keyword and continue on failure    Check promo price on product_CDGS_annual subscription    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
     close all browsers
 
 Check CDGS product page-license-one time purchase
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    license
-    Run keyword if    '${SKU}' in 'LCCDGS2020ML'    run keyword and continue on failure    Check promo price on product_CDGS_one time purchase    ${SKU}    ${Full_Reg}    ${SavingBadge}
-    ...    ${Full_promo}
+    Run keyword if    '${SKU}' in 'LCCDGS2020ML'    run keyword and continue on failure    Check promo price on product_CDGS_one time purchase    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
     close all browsers
 
 Check CDE product page
